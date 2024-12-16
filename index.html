@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Cloud Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        header.hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #00796b, #004d40);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            animation: float-animation 3s ease-in-out infinite;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #ff6347;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 20px;
+            color: #fff;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #f1f1f1;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Button Style */
+        .get-started-btn {
+            background-color: #ff6347;
+            color: white;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started-btn:hover {
+            background-color: #ff4500;
+        }
+
+        /* Technologies Section */
+        section.features {
+            padding: 60px 20px;
+            background-color: #212121;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        section.features h2 {
+            font-size: 2.5rem;
+            color: #ff6347;
+            margin-bottom: 30px;
+        }
+
+        .tools-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 30px;
+        }
+
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+            animation: iconHover 1.5s ease-in-out infinite;
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Advanced Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float-animation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes iconHover {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .tools-section {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            header.hero {
+                padding: 30px;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .tools-section {
+                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            header.hero {
+                height: 80vh;
+                padding: 20px;
+            }
+
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .tools-section {
+                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-content">
+        <!-- Profile Section with Floating Animation -->
+        <div class="profile">
+            <img src="photos/me.JPG" alt="Profile photo of Vaibhav Upare" class="profile-photo" loading="lazy">
+            <h2 class="name">Vaibhav Upare</h2>
+        </div>
+
+        <!-- Main Heading without Typing Effect -->
+        <h1>DevOps Cloud Solutions</h1>
+        
+        <!-- Subheading with Fade-In Animation -->
+        <p>Practical and Hands-On Experience Notes with Guidance related to DevOps, Cloud Solutions, and more.</p>
+
+        <!-- Get Started Button -->
+        <button class="get-started-btn" onclick="window.location.href='first.html'">Get Started</button>
+
+    </div>
+</header>
+
+<!-- Featured Technologies Section -->
+<section class="features" id="features">
+    <h2>Featured Technologies</h2>
+    <div class="tools-section">
+        <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="tech-icon" />
+        </a>
+        <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="Bash" class="tech-icon" />
+        </a>
+        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" class="tech-icon" />
+        </a>
+        <a href="https://cloud.google.com" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="Google Cloud" class="tech-icon" />
+        </a>
+        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" class="tech-icon" />
+        </a>
+        <a href="https://grafana.com" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" class="tech-icon" />
+        </a>
+        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" class="tech-icon" />
+        </a>
+        <a href="https://www.jenkins.io" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="Jenkins" class="tech-icon" />
+        </a>
+        <a href="https://kubernetes.io" target="_blank" rel="noreferrer">
+            <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="Kubernetes" class="tech-icon" />
+        </a>
+    </div>
+</section>
+
+</body>
+</html>
